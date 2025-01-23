@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>MoZBo</title>
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- LiveReload -->
+        <script>
+            document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+        </script>
+    </head>
+    <body>
+        <canvas class="main"></canvas>
+        <script>
+            $(".main").append("<canvas class='paints'></canvas>");
+        </script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
