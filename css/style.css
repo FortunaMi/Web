@@ -1,158 +1,81 @@
 html {
-    height: 1100px;
-    background: #D0F0C0;
+    height: 700px;
+    background: radial-gradient(at top, #FEFFFF, #191970);
 
     text-align: center;
 }
 
-nav{
-    margin: 27px auto 0;
-    position: relative;
-    width: 590px;
-    height: 50px;
-    background-color: rgb(30, 89, 69);
-    border: 1px solid black;
-}
-
-nav a{
-    line-height: 50px;
-    height: 100%;
-    font-size: 15px;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
+.title {
     color: #fff;
-    cursor: pointer;
+    font-family: sans-serif ;
+    text-shadow: 1px 1px 2px #000;
 }
 
-nav.animation{
-    position: absolute;
-    height: 100%;
-    top: 0;
-    z-index: 0;
-    transition: all .5s ease 0s;
-}
-a:nth-child(1) {
-    width: 100px;
-}
-a:nth-child(2) {
-    width: 110px;
-}
-a:nth-child(3) {
-    width: 100px;
-}
-a:nth-child(4) {
-    width: 140px;
-}
-a:nth-child(5) {
-    width: 120px;
-}
-
-nav.start-home, a:nth-child(1):hover ~ .animation {
-    width: 100px;
-    left: 0;
-    background-color: #BDECA6;
-}
-nav.start-home, a:nth-child(2):hover ~ .animation {
-    width: 110px;
-    left: 100;
-    background-color: #BDECB5;
-}
-nav.start-home, a:nth-child(3):hover ~ .animation {
-    width: 100px;
-    left: 210;
-    background-color: #BDECC4;
-}
-nav.start-home, a:nth-child(4):hover ~ .animation {
-    width: 140px;
-    left: 310;
-    background-color: #BDECD3;
-}
-nav.start-home, a:nth-child(5):hover ~ .animation {
-    width: 120px;
-    left: 470;
-    background-color: #BDECE2;
-}
-
-.hr-vertical-lines {
-    margin: 20px 0;
-    padding: 0;
-    height: 10px;
-    border: none;
-    color: rgb(189,236,182);
-    background-image: linear-gradient(90deg, green, green 33.33%, transparent 33.33%, transparent 100%);
-    background-size: 3px 100%;
-}
-
-h1 {
-    cursor: help;
-    padding-bottom: 5px;
-
-}
-
-form {
+table {
     margin: 0 auto;
-    background: rgba(30, 86, 69, 1.0);
-    width: 450px;
-    height: 500px;
-    padding: 20px;
 }
 
-.group {
-    margin: 10px;
-    padding: 5px;
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+.box
+{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+.container
+{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 40px 0;
+flex-wrap: wrap;
 }
 
-label {
-    padding-left: 10px;
-    text-transform: uppercase;
-}
-
-input {
-    margin-top: 10px;
-    height: 40px;
-    width: 400px;
-    border-repeat: 20px/20px;
-    border: none;
-    padding-left: 15px;
-    font-size: 18px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
-}
-
-input:focus {
-    border: 2px solid #BDECB5;
-    transform: translateX(15px);
-    width: 385;
-}
-
-button {
-    cursor: pointer;
-    padding: 10px 100px;
-    width: 55px;
+.container .box
+{
+    position: relative;
+    width: 320px;
+    height: 400px;
     color: #fff;
-    background: black;
-    border: none;
-    font-size: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
+    background: #111;
+    display: fle
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transform: 0.5s;
 }
- 
-
-button:hover {
-    opacity: .80;
-    font-weight: bold;
-    transform: scale(1.1);
+.container .box:hover
+{
+    transform: translateY(-20px);
 }
-
-hr {
-    margin: 20px 0;
-    padding: 0;
-    height: 10px;
-    border: none;
-    color: rgb(189,236,182);
-    background-image: linear-gradient(90deg, green, green 33.33%, transparent 33.33%, transparent 100%);
-    background-size: 3px 100%; 
+.container .box::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45d,#ffbc00,#ff0058);
 }
-
+.container .box::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45d,#ffbc00,#ff0058);
+    filter: blur(30px);
+}
